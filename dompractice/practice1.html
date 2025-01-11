@@ -5,11 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <div style="background-color: black;" class="parent">
+<body style="background-color: black;">
+    <div style="color: white;" class="parent">
         <div class="days">Monday</div>
         <div class="days">Tuesday</div>
         <div class="days">Wednesday</div>
     </div>
+    <ul style="background-color: #212121;" class="languages">
+        <li style="background-color: azure;" class="content">javascript</li>
+    </ul>
 </body>
+<script>
+    // const parents=document.querySelector('.parent')
+    // console.log(parents)
+    // console.log(parents.children)
+    
+    // for (let i = 0; i < parents.children.length; i++) {
+        // const element = parents.children[i];
+        // console.log(parents.children[i].textContent)
+        // element.style.color="blue";
+        // element.style.backgroundColor="green";
+    // }
+
+    const creation=document.createElement('h2')
+    console.log(creation)
+    creation.id=Math.round(Math.random()*10+1)
+    creation.setAttribute("titLe","this is  TITLE")
+    creation.innerText="This is a practice"
+    creation.style.color="blue"
+    // const textt=document.createTextNode("this is practice text")
+    // creation.appendChild(textt)
+    document.body.appendChild(creation)
+
+    function addLanguage(lang){
+        const listt=document.createElement('li');
+        listt.innerHTML=`${lang}`;
+        document.querySelector('.languages').appendChild(listt)
+    }
+    addLanguage("cpp")
+    addLanguage("cp")
+
+    function addDay(day){
+        const heading=document.createElement('h2');
+        heading.style.color="blue"
+        // heading.outerHTML="<h2>day</h2>"
+        document.querySelector('.parent').appendChild(heading)
+
+    }
+    addDay("wednesday")
+
+</script>
+
 </html>
