@@ -20,7 +20,8 @@ const arr1=["nsb","nsbb","nsbbb"]
 // for (const i in obj1){
 //     console.log(obj1[i]);
 // }
-arr.forEach((i)=>{
-    console.log(`The name is${i.name} , the age is ${i.age}`)
+arr1.forEach((i,j,k)=>{
+    console.log(`The name is${i} , the age is ${j},`)
+    console.log(k)
 })
-
+// i gives the items ,j gives the indexes,k returns the whole array
